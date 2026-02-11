@@ -1,0 +1,29 @@
+{
+  "name": "mcp-server-toggl",
+  "version": "1.0.0",
+  "description": "MCP Server for Toggl Track — team-wide reporting via Reports API v3",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-server-toggl": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.10.1",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.4.1"
+  }
+}
