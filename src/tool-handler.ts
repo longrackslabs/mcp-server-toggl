@@ -14,6 +14,7 @@ import { listClientsTool } from "./tools/client-tools.js";
 import { listUsersTool } from "./tools/user-tools.js";
 import { listTasksTool } from "./tools/task-tools.js";
 import {
+  getSavedReportTool,
   searchTimeEntriesTool,
   getSummaryReportTool,
 } from "./tools/report-tools.js";
@@ -25,6 +26,7 @@ export const list_of_tools: Tool[] = [
   listClientsTool,
   listUsersTool,
   listTasksTool,
+  getSavedReportTool,
   searchTimeEntriesTool,
   getSummaryReportTool,
 ];
@@ -83,6 +85,14 @@ export function tool_handler(
         case "toggl_list_tasks": {
           const { workspace_id, project_id } = args;
           const result = await toggl.listTasks(workspace_id, project_id);
+          return {
+            content: [{ type: "text", text: JSON.stringify(result) }],
+          };
+        }
+
+        case "toggl_get_saved_report": {
+          const { report_token } = args;
+          const result = await toggl.getSavedReport(report_token);
           return {
             content: [{ type: "text", text: JSON.stringify(result) }],
           };

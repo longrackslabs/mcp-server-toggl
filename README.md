@@ -75,6 +75,7 @@ Then point your MCP client at the built server:
 
 | Tool | Description |
 |------|-------------|
+| `toggl_get_saved_report` | Load a previously saved Toggl report by its share token. Returns the full report data as JSON. |
 | `toggl_search_time_entries` | Search time entries across all team members. Supports filtering by project, client, user, task, and description. Auto-paginates and enriches results with names. |
 | `toggl_get_summary_report` | Get aggregated time totals grouped by users, projects, or clients. Supports sub-grouping for breakdowns like "each user's time by project." |
 

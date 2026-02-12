@@ -1,5 +1,21 @@
 import { Tool } from "@modelcontextprotocol/sdk/types.js";
 
+export const getSavedReportTool: Tool = {
+  name: "toggl_get_saved_report",
+  description:
+    "Load a previously saved Toggl report by its share token. Returns the full report data as JSON including detailed results, summary results, and report metadata. The share token can be found in the URL when viewing a shared report in Toggl (e.g. the token in https://track.toggl.com/shared-report/xxxxxxxx).",
+  inputSchema: {
+    type: "object",
+    properties: {
+      report_token: {
+        type: "string",
+        description: "The saved report's share token",
+      },
+    },
+    required: ["report_token"],
+  },
+};
+
 export const searchTimeEntriesTool: Tool = {
   name: "toggl_search_time_entries",
   description:

@@ -157,6 +157,15 @@ export class TogglClient {
     return allEntries;
   }
 
+  // ── Reports: Saved Report ───────────────────────────────────
+
+  async getSavedReport(reportToken: string): Promise<any> {
+    return this.request(`${TOGGL_REPORTS_BASE}/shared/${reportToken}`, {
+      method: "POST",
+      body: JSON.stringify({}),
+    });
+  }
+
   // ── Reports: Summary Report ────────────────────────────────
 
   async getSummaryReport(
