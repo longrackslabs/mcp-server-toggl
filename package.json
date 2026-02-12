@@ -16,6 +16,16 @@
     "start": "node dist/index.js",
     "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
   },
+  "keywords": [
+    "mcp",
+    "toggl",
+    "time-tracking",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/longrackslabs/mcp-server-toggl.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
