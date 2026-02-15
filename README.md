@@ -1,5 +1,7 @@
 # mcp-server-toggl
 
+[![Listed on mcpservers.org](https://img.shields.io/badge/Listed%20on-mcpservers.org-blue)](https://mcpservers.org/servers/longrackslabs/mcp-server-toggl)
+
 An MCP server for [Toggl Track](https://toggl.com/track/) that provides team-wide time tracking, reporting, and workspace management through the Model Context Protocol.
 
 Built on Toggl's v9 API and Reports API v3, this server lets AI assistants query time entries, generate summary reports, and browse workspace data across your entire team — not just the authenticated user.
